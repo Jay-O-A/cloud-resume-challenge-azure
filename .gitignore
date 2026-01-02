@@ -2,3 +2,6 @@ node_modules/
 .env
 .terraform/
 terraform.tfstate*
+dammy.txt
+index_old.html
+index_old_2.html

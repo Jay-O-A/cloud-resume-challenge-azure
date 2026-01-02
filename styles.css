@@ -157,3 +157,48 @@ footer {
   font-size: 0.9rem;
   color: var(--text);
 }
+
+
+/* Certification Carousel */
+.cert-carousel {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 600px;
+  margin: 1.5rem auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  min-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-color, #333);
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}

@@ -20,3 +20,26 @@ fetch("https://crc-counter-fn.azurewebsites.net/api/counter")
     console.error("Error fetching visitor count:", error);
     document.getElementById("counter").innerText = "—";
   });
+
+// Certification Carousel
+const track = document.querySelector(".carousel-track");
+const slides = Array.from(track.children);
+const nextBtn = document.querySelector(".carousel-btn.next");
+const prevBtn = document.querySelector(".carousel-btn.prev");
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel();
+});
+
+prevBtn.addEventListener("click", () => {
+  currentIndex =
+    (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel();
+});
