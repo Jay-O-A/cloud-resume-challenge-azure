@@ -3,7 +3,10 @@ name: Deploy Resume Website
 on:
   push:
     paths:
-      - "resume-site/**"
+      - "**/*.html"
+      - "**/*.css"
+      - "**/*.js"
+      - "images/**"
 
 permissions:
   id-token: write
