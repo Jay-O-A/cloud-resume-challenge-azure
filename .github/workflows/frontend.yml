@@ -32,5 +32,9 @@ jobs:
           az storage blob upload-batch \
             --account-name crcresumewebinfra \
             --destination '$web' \
-            --source resume-site \
+            --source . \
+            --pattern "*.html" \
+            --pattern "*.css" \
+            --pattern "*.js" \
+            --paatern "images/*" \
             --overwrite
