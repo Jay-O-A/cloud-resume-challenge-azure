@@ -37,4 +37,5 @@ jobs:
             --pattern "*.css" \
             --pattern "*.js" \
             --paatern "images/*" \
-            --overwrite
+            --overwrite \
+            --auth-mode login
