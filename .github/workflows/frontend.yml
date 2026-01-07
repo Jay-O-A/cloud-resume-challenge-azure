@@ -36,6 +36,6 @@ jobs:
             --pattern "*.html" \
             --pattern "*.css" \
             --pattern "*.js" \
-            --paatern "images/*" \
+            --pattern "images/*" \
             --overwrite \
             --auth-mode login
