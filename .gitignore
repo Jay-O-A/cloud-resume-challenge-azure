@@ -5,3 +5,4 @@ terraform.tfstate*
 dammy.txt
 index_old.html
 index_old_2.html
+frontend_old.yml
