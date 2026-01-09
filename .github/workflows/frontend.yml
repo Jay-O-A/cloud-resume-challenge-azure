@@ -27,12 +27,12 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
- - name: Debug: show active Azure context
-  run: |
-    az account show
-    az storage account list -o table    
+      - name: Debug: show active Azure context
+        run: |
+          az account show
+          az storage account list -o table    
 
- - name: Upload resume site to Blob Storage
+      - name: Upload resume site to Blob Storage
         run: |
           az storage blob upload-batch \
             --account-name crcresumewebinfra \
@@ -44,3 +44,4 @@ jobs:
             --pattern "images/*" \
             --overwrite \
             --auth-mode login
+   
