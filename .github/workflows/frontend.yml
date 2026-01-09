@@ -30,7 +30,7 @@ jobs:
       - name: Debug: show active Azure context
         run: |
           az account show
-          az storage account list -o table    
+          az storage account list -o table
 
       - name: Upload resume site to Blob Storage
         run: |
@@ -44,4 +44,4 @@ jobs:
             --pattern "images/*" \
             --overwrite \
             --auth-mode login
-   
+
