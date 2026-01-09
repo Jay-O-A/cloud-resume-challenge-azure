@@ -2,6 +2,8 @@ name: Deploy Resume Website
 
 on:
   push:
+    branches:
+      - main
     paths:
       - "**/*.html"
       - "**/*.css"
@@ -44,4 +46,3 @@ jobs:
             --pattern "images/*" \
             --overwrite \
             --auth-mode login
-
