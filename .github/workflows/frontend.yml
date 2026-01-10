@@ -1,6 +1,7 @@
+---
 name: Deploy Resume Website
 
-on:
+"on":
   push:
     branches:
       - main
@@ -25,11 +26,11 @@ jobs:
       - name: Azure Login (OIDC)
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: "${{ secrets.AZURE_CLIENT_ID }}"
+          tenant-id: "${{ secrets.AZURE_TENANT_ID }}"
+          subscription-id: "${{ secrets.AZURE_SUBSCRIPTION_ID }}"
 
-      - name: Debug: show active Azure context
+      - name: "Debug: show active Azure context"
         run: |
           az account show
           az storage account list -o table
@@ -46,4 +47,3 @@ jobs:
             --pattern "images/*" \
             --overwrite \
             --auth-mode login
-
