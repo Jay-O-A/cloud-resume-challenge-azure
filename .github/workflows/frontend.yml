@@ -40,6 +40,6 @@ jobs:
           az storage blob upload-batch \
             --account-name crcresumewebinfra \
             --destination '$web' \
-            --source . \
+            --source site \
             --overwrite \
             --auth-mode login
