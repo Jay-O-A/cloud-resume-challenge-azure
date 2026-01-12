@@ -41,9 +41,5 @@ jobs:
             --account-name crcresumewebinfra \
             --destination '$web' \
             --source . \
-            --pattern "*.html" \
-            --pattern "*.css" \
-            --pattern "*.js" \
-            --pattern "images/*" \
             --overwrite \
             --auth-mode login
